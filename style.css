@@ -1,0 +1,345 @@
+:root {
+        --bg: #050505;
+        --card: #121212;
+        --accent: #00f2ff;
+        --sports: #ff3b3b;
+        --cinema: #bf3bff;
+        --text: #ffffff;
+        --card-radius: 24px;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER ORIGINAL CON SWITCH INTEGRADO */
+    .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(5, 5, 5, 0.8);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 20px 40px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+        margin: 0;
+        background: linear-gradient(to bottom, #fff 50%, #666);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    /* ESTILO DEL SWITCH (Adaptado a tu diseño) */
+    .pro-control {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255,255,255,0.03);
+        padding: 8px 16px;
+        border-radius: 50px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .pro-text {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: #555;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 38px;
+        height: 20px;
+    }
+
+    .switch input { opacity: 0; width: 0; height: 0; }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #222;
+        transition: .4s;
+        border-radius: 34px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px; width: 14px;
+        left: 3px; bottom: 3px;
+        background-color: #555;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .slider { background-color: var(--accent); }
+    input:checked + .slider:before { transform: translateX(18px); background-color: #000; }
+
+    /* LÓGICA DE OCULTAR / MOSTRAR */
+    .card.is-pro {
+        display: none !important; /* Oculto por defecto */
+    }
+
+    body.show-pro .card.is-pro {
+        display: flex !important; /* Aparece cuando se activa el switch */
+        animation: cardAppear 0.5s ease;
+    }
+
+    @keyframes cardAppear {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Configuración para PC (6 columnas fijas) */
+.grid-premium {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+/* Configuración para Tablets (4 columnas) */
+@media (max-width: 1024px) {
+    .grid-premium {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Configuración para Móviles (2 columnas exactas) */
+@media (max-width: 768px) {
+    .grid-premium {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px; /* Espacio más pequeño en móvil */
+        padding: 0 10px 80px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.2rem; /* Título un poco más pequeño en móvil */
+    }
+
+    .pro-control {
+        padding: 5px 10px; /* Switch más compacto en móvil */
+    }
+
+    .pro-text {
+        display: none; /* Ocultamos el texto largo en móvil para ganar espacio */
+    }
+}
+    .card {
+        position: relative;
+        background: var(--card);
+        border-radius: var(--card-radius);
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+        border: 1px solid rgba(255,255,255,0.03);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+        transform: skewX(-25deg);
+        transition: 0.7s;
+    }
+
+    .card:hover::after { left: 150%; }
+    .card:hover { transform: translateY(-10px); }
+
+    .card.deportes:hover { box-shadow: 0 10px 30px rgba(255, 59, 59, 0.15); border-color: var(--sports); }
+    .card.noticias:hover { box-shadow: 0 10px 30px rgba(0, 242, 255, 0.15); border-color: var(--accent); }
+    .card.cine:hover { box-shadow: 0 10px 30px rgba(191, 59, 255, 0.15); border-color: var(--cinema); }
+
+    .logo-wrap {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: calc(var(--card-radius) - 6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .logo-wrap img {
+        width: 45% !important;
+        height: 45% !important;
+        object-fit: contain;
+        transition: 0.5s ease;
+    }
+
+    .card:hover .logo-wrap img { transform: scale(1.15); }
+    
+    /* Este resplandor solo se aplicará a los canales que tú elijas */
+.logo-oscuro img {
+    filter: drop-shadow(1px 1px 0px rgba(255,255,255,0.8)) 
+            drop-shadow(-1px -1px 0px rgba(255,255,255,0.8)) 
+            brightness(1.2);
+}
+
+/* Efecto hover solo para estos logos */
+.card.logo-oscuro:hover img {
+    filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.6)) brightness(1.5);
+}
+
+
+    .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 3px 10px;
+        border-radius: 50px;
+        font-size: 8px;
+        font-weight: 800;
+        text-transform: uppercase;
+        border: 1px solid currentColor;
+        backdrop-filter: blur(5px);
+    }
+
+    .info { padding: 12px 5px 8px 5px; text-align: center; }
+    .info h3 { margin: 0; font-size: 0.8rem; font-weight: 600; color: #efefef; }
+
+    .status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 9px;
+        color: #555;
+        margin-top: 4px;
+        text-transform: uppercase;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        background: #39ff14;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #39ff14;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.4); opacity: 0.5; }
+    }
+    
+    .search-container {
+    max-width: 600px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.search-icon {
+    color: #666;
+    margin-right: 12px;
+}
+
+.search-box:focus-within .search-icon {
+    color: var(--accent);
+}
+
+#canalSearch {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+#canalSearch::placeholder {
+    color: #555;
+}
+
+.site-footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(0px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #666;
+}
+
+.site-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.site-footer a:hover {
+    text-shadow: 0 0 10px var(--accent);
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.counter-wrap {
+    margin-top: 15px;
+    opacity: 0.7;
+    filter: grayscale(1) invert(1); /* Para que el contador combine con el modo oscuro */
+}
+
+/* Ocultar canales PRO y Adultos por defecto */
+.card.is-pro, .card.is-adult {
+    display: none !important;
+}
+
+/* Mostrar cuando se activa la clase en el body */
+body.show-pro .card.is-pro {
+    display: flex !important;
+}
+
+body.show-adult .card.is-adult {
+    display: flex !important;
+}
