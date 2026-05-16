@@ -1,0 +1,1172 @@
+body {
+    font-size: 100%;
+    background: #02054f
+}
+
+
+.cookie-notice {
+    display: none !important;
+}
+
+#cookieChoiceInfo {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Cambia el color de fondo si es necesario */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    padding: 10px; /* Espaciado para que se vea mejor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar un efecto de profundidad */
+}
+
+#event-list {
+    margin-top: 70px; /* Ajusta este valor según la altura de tu header fijo */
+}
+
+body {
+    font-size: 100%;
+    background: #02054f
+}
+
+a {
+    text-decoration: none
+}
+
+ul,
+ul ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#wraper {
+    width: 100%;
+    margin: 0 auto;
+    font-size: .8125em
+}
+
+.menu {
+    width: auto;
+    height: auto;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .73), 0 0 18px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .73), 0 0 18px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .73), 0 0 18px 0 rgba(0, 0, 0, .1)
+}
+
+.menu>li>a {
+    background-color: #020238;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(80, 88, 100)));
+    background-image: -webkit-linear-gradient(top, rgb(19, 19, 19), rgb(19, 19, 19));
+    background-image: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-image: -o-linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-image: linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#727a86', EndColorStr='#505864');
+    border-bottom: 0 solid #33373d;
+    -webkit-box-shadow: inset 0 1px 0 0 #878e98;
+    -moz-box-shadow: inset 0 1px 0 0 #878e98;
+    box-shadow: inset 0 1px 0 0 #878e98;
+    width: 100%;
+    height: 2.8em;
+    line-height: 2.8em;
+    text-indent: 6.9em;
+    display: block;
+    position: relative;
+    font-family: arial, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1em;
+    text-shadow: 0 0 0 #000
+}
+
+.menu ul li a {
+    background: #02054f;
+    border-bottom: 1px solid #efeff0;
+    width: 100%;
+    height: 2.8em;
+    line-height: 2.8em;
+    text-indent: 3.75em;
+    display: block;
+    position: relative;
+    font-family: "Arial", Arial, Helvetica, sans-seri;
+    font-size: 1em;
+    font-weight: 500;
+    color: #02054f;
+}
+
+.menu>li>a:hover,
+.menu>li>a.active {
+    background-color: #03588a;
+    background-image: -webkit-linear-gradient(top, #03588a,  #03588a);
+    border-bottom: 1px solid #03588a;
+    box-shadow: inset 0 1px 0 0 #03588a;
+}
+
+.menu>li>a.active {
+    border-bottom: 0 solid #03588a
+}
+
+@media only screen and (max-width: 600px) {
+    .menu>li>a:before {
+        left: 22px;
+    }
+}
+
+.menu>li>a:before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 25px;
+    height: 0.8em;
+    width: 2.4em;
+    position: absolute;
+    left: 55px;
+    top: 55%;
+    margin: -.45em 0 0;
+}
+
+.menu>li>a span {
+    font-size: .95em;
+    display: inline-block;
+    position: absolute;
+    left: .3em;
+    top: 50%;
+    background: #fff;
+    line-height: 1em;
+    height: 1em;
+    padding: .3em .6em;
+    margin: -.8em 0 0;
+    color: #24B807;
+    text-indent: 0;
+    text-align:
+        center;
+    -webkit-border-radius: .769em;
+    -moz-border-radius: .769em;
+    border-radius: .569em;
+    -webkit-box-shadow:
+        inset 0 1px 3px 0 rgba(0, 0, 0, .16), 0 1px 0 0 rgba(63, 68, 74, .1);
+    -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .16), 0 1px 0 0 rgba(63, 68, 74, .1);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .16), 0 1px 0 0 rgba(63, 68, 74, .1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+    font-weight: 500
+}
+
+.menu>li>a:hover span,
+.menu>li a.active span {
+    background: #02054f
+}
+
+.menu>li>ul li a:before {
+    content: '\25B6';
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    color: #000;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: 0;
+    left: -2.7em;
+}
+
+.menu ul li:last-child a {
+    border-bottom: 1px solid #02054f
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #02054f);
+    border-radius: 6px;
+}
+
+.menu>li>ul li:hover a,
+.menu>li>ul li:hover a span,
+.menu>li>ul li:hover a:before {
+    color: #2e9afe
+}
+
+.menu ul>li>a span {
+    font-size: .857em;
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    background: #fff;
+    border: 1px solid #d0d0d3;
+    line-height: 1em;
+    height: 1em;
+    padding: 0.4em 0.7em;
+    margin: -0.9em 0 0;
+    color: #000;
+    text-indent: 0;
+    text-align: center;
+    -webkit-border-radius: 0.769em;
+    -moz-border-radius: 769em;
+    border-radius: 769em;
+    text-shadow: 0 0 0 rgba(255, 255, 255, .01);
+}
+
+div.sombreada_css3 {
+    background-color: #000000;
+    width: 100%px;
+    padding: 12px;
+    color: #002399;
+    box-shadow: 0px 1px 1px #333;
+    -webkit-box-shadow: 0px 1px 1px #333;
+    -moz-box-shadow: 0px 1px 1px #333;
+}
+
+.ARGENTINA >a:before,
+.SERIERIODELAPLATA >a:before,
+.COPAARGENTINA >a:before,
+.ARGENTINAPRIMERANACIONAL >a:before,
+.ARGENTINAPRIMERAB >a:before,
+.ARGENTINAPRIMERABSUPERFINAL >a:before,
+.ARGENTINALIGAPROFESIONAL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v15/Competitors/2378);
+}
+
+.CZECHREPUBLIC >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v20/Competitors/5040);
+}
+
+.CSL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2381);
+}
+
+.UAELEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5089);
+}
+
+.LITHUANIAALYGA >a:before,
+.LITHUANIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2312);
+}
+
+.POLANDDIV1 >a:before,
+.POLANDDIV2 >a:before,
+.POLISHCUP >a:before,
+.EKSTRAKLASA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5038);
+}
+
+.ALLSVENSKAN >a:before,
+.SWEDENDAMALLSVENSKAN >a:before,
+.SWEDENDIV1 >a:before,
+.SWEDEN >a:before,
+.SUPERETTAN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2371);
+}
+
+.IRELANDFAICUP >a:before,
+.IRELANDDIV1 >a:before,
+.IRELAND >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5064);
+}
+
+.KLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2383);
+}
+
+.SERBIA >a:before,
+.SERBIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2374);
+}
+
+.SLOVAKIA >a:before,
+.SLOVAKCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5039);
+}
+
+.SLOVENIA >a:before,
+.SLOVENIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5041);
+}
+
+.MOLDOVA >a:before,
+.MOLDOVANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5031);
+}
+
+.GREECE >a:before,
+.GREEKCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5030);
+}
+
+.FAROEISLANDS >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5058);
+}
+
+.OBOS-LIGAEN >a:before,
+.ELITESERIEN >a:before,
+.NMCUP >a:before,
+.TOPPSERIENWOMEN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2376);
+}
+
+.LIGABIH >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5241);
+}
+
+.CAFSUPERCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/5581);
+}
+
+.CAFCHAMPIONSLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/624);
+}
+
+.MONTENEGRO >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5063);
+}
+
+.RUSSIA >a:before,
+.RUSSIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5044);
+}
+
+.MALAYSIASUPERLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5470);
+}
+
+.LATVIAVIRSLIGA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2300);
+}
+
+.ROMANIA >a:before,
+.ROMANIANCUP >a:before,
+.ROMANIALIGA2 >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5060);
+}
+
+.SPAINLIGAF >a:before,
+.LALIGA >a:before,
+.COPADELAREINA >a:before,
+.LALIGA2 >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5050);
+}
+
+.ITALY >a:before,
+.COPPAITALIAWOMEN >a:before,
+.ITALYSUPERCUP >a:before,
+.SERIEA >a:before,
+.ITALYSERIEAWOMEN >a:before,
+.SERIEB >a:before,
+.ITALYSERIEC >a:before,
+.COPPAITALIA >a:before,
+.COPPAITALIASERIEC >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitors/2375);
+}
+
+.GERMANY >a:before,
+.DFBPOKAL >a:before,
+.BUNDESLIGA >a:before,
+.BUNDESLIGA2 >a:before,
+.BUNDESLIGA3 >a:before,
+.BUNDESLIGAWOMEN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2372);
+}
+
+.BULGARIA >a:before,
+.BULGARIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5062);
+}
+
+.ENGLAND >a:before,
+.FACUP >a:before,
+.WOMENSFACUP >a:before,
+.NATIONALLEAGUECUP >a:before,
+.PREMIERLEAGUEINTERNATIONALCUP >a:before,
+.ENGLANDNATIONALLEAGUECUP >a:before,
+.EPL2 >a:before,
+.WOMENSSUPERLEAGUE >a:before,
+.WOMENSLEAGUECUP >a:before,
+.ENGLANDNATIONALLEAGUE >a:before,
+.ENGLANDCHAMPIONSHIP >a:before,
+.ENGLANDLEAGUEONE >a:before,
+.EPL >a:before,
+.ENGLANDLEAGUETWO >a:before,
+.EFLTROPHY >a:before,
+.EFLCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5054);
+}
+
+.UEFACHAMPIONSLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v4/Competitions/572);
+}
+
+.UEFACONFERENCELEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v5/Competitions/7685);
+}
+
+.PORTUGAL >a:before,
+.TACADALIGA >a:before,
+.LIGAPORTUGAL2 >a:before,
+.TACADEPORTUGAL >a:before,
+.LIGAPORTUGAL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5028);
+}
+
+.FRANCE >a:before,
+.COUPEDEFRANCE >a:before,
+.FRANCEPREMIERELIGUE >a:before,
+.FRANCEDIV1WOMEN >a:before,
+.LIGUE1 >a:before,
+.LIGUE2 >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5061);
+}
+
+.MEXICOLIGAMX >a:before,
+.MEXICO >a:before,
+.LIGAMX >a:before,
+.LIGAMXF >a:before,
+.MEXICOLIGADEEXPANSION >a:before,
+.LIGADEEXPANSIONMX >a:before,
+.LIGADEEXPANSIONMXSUPERFINAL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v14/Competitors/5106);
+}
+
+.CANADA >a:before,
+.CANADIANPREMIERLEAGUE >a:before,
+.CANADACHAMPIONSHIP >a:before,
+.CANADIANCHAMPIONSHIP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2388);
+}
+
+.FIFAINTERCONTINENTALCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v12/Competitions/8268);
+}
+
+.COLOMBIAPRIMERAA >a:before,
+.COLOMBIAPRIMERAB >a:before,
+.COLOMBIASUPERCUP >a:before,
+.COLOMBIAPRIMERABGRANDFINAL >a:before,
+.COPACOLOMBIA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v12/Competitors/5071);
+}
+
+.CHILE >a:before,
+.CHILEPRIMERAA >a:before,
+.COPACHILE >a:before,
+.CHILESUPERCUP >a:before,
+.CHILEPRIMERAB >a:before,
+.CHILEPRIMERABPROMOTION >a:before,
+.CHILEANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/5074);
+}
+
+.URUGUAY >a:before,
+.LIGAAUFURUGUAYA >a:before,
+.URUGUAYPRIMERADIVISION >a:before,
+.COPAURUGUAY >a:before,
+.URUGUAYSEGUNDADIV >a:before,
+.URUGUAYSEGUNDADIVISION >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v15/Competitors/5073);
+}
+
+.BRAZILCOPINHA >a:before,
+.COPADONORDESTE >a:before,
+.COPAPAULISTA >a:before,
+.BRAZILCARIOCA >a:before,
+.BRAZILPAULISTA >a:before,
+.BRAZILGAUCHO >a:before,
+.BRAZILMINEIRO >a:before,
+.BRAZILPARANAENSE >a:before,
+.BRAZILSERIEA >a:before,
+.BRASILLADIESCUP >a:before,
+.BRAZILSERIEB >a:before,
+.BRAZILSERIEC >a:before,
+.BRASILEIRO >a:before,
+.BRASILEIROU20 >a:before,
+.COPADOBRASIL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v12/Competitors/2379);
+}
+
+.PERU >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/5076);
+}
+
+.ECUADOR >a:before,
+.ECUADORSERIEB >a:before,
+.COPAECUADOR >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v12/Competitors/5075);
+}
+
+.BOLIVIA >a:before,
+.COPABOLIVIA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/5077);
+}
+
+.PARAGUAY >a:before,
+.COPAPARAGUAY >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/5070);
+}
+
+.J1-LEAGUE >a:before,
+.J2-LEAGUE >a:before,
+.J3-LEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2382);
+}
+
+.CONCACAFWCHAMPIONSCUP >a:before,
+.CONCACAF-F >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/8240);
+}
+
+.CONCACAFCHAMPIONSCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v6/Competitions/171);
+}
+
+.CONCACAFCHAMPIONSHIP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/8530);
+}
+
+.SOUTHAMERICANCHAMPIONSHIP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitions/5453);
+}
+
+.AUSTRALIACUP >a:before,
+.A-LEAGUE >a:before,
+.A-LEAGUEWOMEN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2380);
+}
+
+.AUSTRIABUNDESLIGA >a:before,
+.OFBCUP >a:before,
+.AUSTRIA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v4/Competitors/5059);
+}
+
+.KAZAKHSTAN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitors/5056);
+}
+
+.ALBANIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5029);
+}
+
+.MLS >a:before,
+.NSL >a:before,
+.NCAA >a:before,
+.NCAATOURNAMENT >a:before,
+.NISA >a:before,
+.USOPENCUP >a:before,
+.MLSNEXTPRO >a:before,
+.USL >a:before,
+.USLCUP >a:before,
+.USLSUPERLEAGUE >a:before,
+.USL1 >a:before,
+.NWSL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/2389);
+}
+
+.CAMPEONESCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/7259);
+}
+
+.JAMAICA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v15/Competitors/5421);
+}
+
+.HONDURAS >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2390);
+}
+
+.TURKEY1LIG >a:before,
+.TURKEYSUPERLIG >a:before,
+.TURKISHCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5047);
+}
+
+.COPADELREY >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v5/Competitions/13);
+}
+
+.SWISSSUPERLEAGUE >a:before,
+.SWISSCHALLENGELEAGUE >a:before,
+.SWISSCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5032);
+}
+
+.SUOMENCUP >a:before,
+.FINLANDYKKOSLIIGA >a:before,
+.FINLAND >a:before,
+.VEIKKAUSLIIGA >a:before,
+.FINLANDVEIKKAUSLIIGA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5045);
+}
+
+.ISRAELLIGATHAAL >a:before,
+.ISRAELLEUMITLEAGUE >a:before,
+.ISRAELSTATECUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5034);
+}
+
+.UKRAINE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5057);
+}
+
+.GULFCLUBCHAMPIONSLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/8400);
+}
+
+.EREDIVISIE >a:before,
+.KNVBBEKER >a:before,
+.EERSTEDIVISIE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2377);
+}
+
+.BELGIUM1A >a:before,
+.BELGIUM1B >a:before,
+.BELGIANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/2373);
+}
+
+.CHA >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/cha.png);
+}
+
+.UE >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/ue.png);
+}
+
+.UEC >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/uec.png);
+}
+
+.COPALIBERTADORES >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v6/Competitions/102);
+}
+
+.COPASUDAMERICANA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/389);
+}
+
+.AMERICA >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/america.png);
+}
+
+.EURO >a:before,
+.EUROQUALIFIER >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v4/Competitions/6071);
+}
+
+.BAS >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/bas.png);
+}
+
+.TE >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/te.png);
+}
+
+.ICELAND >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5067);
+}
+
+.DENMARK >a:before,
+.LANDSPOKALCUP >a:before,
+.DENMARK1STDIVISION >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5027);
+}
+
+.RUG >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/rug.png);
+}
+
+.NFL >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/nfl.png);
+}
+
+.HAND >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/han.png);
+}
+
+.AFCUP >a:before,
+.AFCCHALLENGELEAGUE >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/afcup.png);
+}
+
+.AFCCHAMPIONSLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v7/Competitions/623);
+}
+
+.EGYPT >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5100);
+}
+
+.AEW >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/aew.png);
+}
+
+.AFR >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/africa.png);
+}
+
+.ATP >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/atp.png);
+}
+
+.ENDESA >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/endesa.png);
+}
+
+.F1 >a:before {
+    background-image: url(https://nowomi.quest/flags/f-1.png);
+}
+
+.F2 >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/f2.png);
+}
+
+.F3 >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/f3.png);
+}
+
+.FIFACLUB >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/fifaclub.png);
+}
+
+.FIFAWORLDCUP >a:before {
+    background-image: url(https://images.seeklogo.com/logo-png/57/2/club-world-cup-2025-logo-png_seeklogo-577684.png);
+}
+
+.SAUDIPROFESSIONALLEAGUE >a:before,
+.SAUDIKINGCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5087);
+}
+
+.BOX >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/box.png);
+}
+
+.PREMIEDENMARKRLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/7);
+}
+
+.CHAMPIONSHIP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/1);
+}
+
+.PRIMEIRALIGA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/73);
+}
+
+.SUPERLIGTUR >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/78);
+}
+
+.PREOLIMPICO >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/7281);
+}
+
+.LIGABETPLAY >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/620);
+}
+
+.CLUBWORLDCUP >a:before,
+.FIFACLUBWORLDCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v8/Competitions/5096);
+}
+
+.SERIERIO >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/8052);
+}
+
+.LMB >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/lmb.png);
+}
+
+.LCC >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/5485);
+}
+
+.CAFCONFEDERATIONCUP >a:before,
+.AFRICACUPOFNATIONS >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/627);
+}
+
+.CONCAU20 >a:before {
+    background-image: url(https://librefutbol.me/flags/u20.png?new);
+}
+
+.CONCACAFCENTRALAMERICANCUP >a:before,
+.CENTRALAMERICANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/7954);
+}
+
+.CONCACAFCARIBBEANCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/7975);
+}
+
+.SERIECARIBE >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/seriecaribe.png);
+}
+
+.FUTSAL-COPA >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/futsal.png);
+}
+
+.UEFAYOUTHLEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/6297);
+}
+
+.CICLISMO >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/ciclismo.png);
+}
+
+.GOLDCUP-F >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v3/Competitions/7996);
+}
+
+.GOLDCUP >a:before,
+.CONCACAFGOLDCUP >a:before,
+.CONCACAFGOLDCUPQUALIFIER >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/589);
+}
+
+.NONE >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/international.webp);
+}
+
+.VENEZUELA >a:before,
+.VENEZUELALIGAFUTVE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/5072);
+}
+
+.RUGBY >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/rugby-union.webp);
+}
+
+.UEFANATIONSLEAGUE >a:before,
+.UEFANATIONSLEAGUEAPLAYOFFS >a:before,
+.UEFANATIONSLEAGUEA >a:before,
+.UEFANATIONSLEAGUEB >a:before,
+.UEFANATIONSLEAGUEC >a:before,
+.UEFANATIONSLEAGUED >a:before,
+.UEFANATIONSLEAGUEAB >a:before,
+.UEFANATIONSLEAGUEBC >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/7016);
+}
+
+.AFRICACUPOFNATIONSQUALIFIER >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/588);
+}
+
+.MFP >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/MFP.png);
+}
+
+.UCL >a:before,
+.UEFACHAMPIONSLEAGUEWOMEN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v3/Competitions/6225);
+}
+
+.UEFAEUROPALEAGUE >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v3/Competitions/596);
+}
+
+.WORLDCUPQUALIFIER >a:before {
+    background-image: url(https://aguilaazulcrema.github.io/img/wc26.png);
+}
+
+.FIBAAMERICA >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/fiba.png);
+}
+
+.AFROBASKET >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/afrobasket.png);
+}
+
+.ASIACUPFIBA >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/asiacupfiba.webp);
+}
+
+.COSTARICAPRIMERADIVISION >a:before,
+.COSTARICALIGADEASCENSO >a:before,
+.COPACOSTARICA >a:before,
+.COSTARICA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v11/Competitors/5424);
+}
+
+.ESTONIA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5051);
+}
+
+.MOTOGP >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/motogp.webp);
+}
+
+.MOTO2 >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/moto2.webp);
+}
+
+.MOTO3 >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/moto3.webp);
+}
+
+.INDYCAR >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/indycar.webp);
+}
+
+.KINGS-LEAGUE >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/kingsleague.png);
+}
+
+.AFCCHAMPIONSLEAGUE2 >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v6/Competitions/568);
+}
+
+.MLB >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/mlb.png);
+}
+
+.NATIONS >a:before {
+    background-image: url(https://deportestvhd2.com/flags/nations.png);
+}
+
+.NATIONSF >a:before {
+    background-image: url(https://deportestvhd2.com/flags/nationsf.png);
+}
+
+.CONCACAF_NATIONS >a:before,
+.CONCACAFNATIONSLEAGUE >a:before,
+.CONCACAFNATIONSLEAGUEC >a:before,
+.CONCACAFNATIONSLEAGUEB >a:before,
+.CONCACAFNATIONSLEAGUEA >a:before,
+.CONCACAFNATIONSLEAGUEPLAYIN >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v3/Competitions/7165);
+}
+
+.SUD-17F >a:before {
+    background-image: url(https://deportestvhd2.com/flags/suda17fm.png);
+}
+
+.EUROFEM >a:before {
+    background-image: url(https://cnytesas.bar/flags/eurowomens.png);
+}
+
+.SUPERCUPMX >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitions/6263);
+}
+
+.SUMMER-CUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/8218);
+}
+
+.OLIMPICOS >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v4/Competitions/6370);
+}
+
+.LEAGUESCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/7242);
+}
+
+.UEFA_SUPERCOPA >a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/uefasupercopa.png);
+}
+
+.ELSALVADOR >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5415);
+}
+
+.GUATEMALA >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitors/5404);
+}
+
+.WORLDCUP >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v2/Competitions/6818);
+}
+
+.ELIMINATORIAS_CONMEBOL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v3/Competitions/613);
+}
+
+.CROATIAHNL >a:before,
+.CROATIANCUP >a:before,
+.CROATIAPRVANL >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v3/Competitors/5055);
+}
+
+.SCO >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/sco.png);
+}
+
+.CR >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/cr.png);
+}
+
+.VOLEY >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/voley.png);
+}
+
+.NHL >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/nhl.png);
+}
+
+.WWE >a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/wwe.png);
+}
+
+.SCOTLANDSWPL >a:before,
+.SCOTLAND >a:before,
+.SCOTLANDPREMIERSHIP >a:before,
+.SCOTTISHCUP >a:before,
+.SCOTLANDLEAGUECUP >a:before,
+.SCOTLANDCHALLENGECUP >a:before,
+.SCOTTISHLEAGUECUP >a:before,
+.SCOTLAND2ND >a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v1/Competitors/5069);
+}
+
+
+.menu>li.COPA_AMERICA>a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/copa_america.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 36px;
+    height: 1em;
+    width: 2em;
+    position: absolute;
+    left: 40px;
+    top: 55%;
+    margin: -0.5em 0 0;
+}
+
+.menu>li.NBA>a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/nba.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 23px;
+    position: absolute;
+    top: 55%;
+    margin: -0.5em 0 0;
+    height: 1em;
+    width: 2em;
+}
+
+.menu>li.FRIENDLY>a:before {
+    background-image: url(https://www.zerozero.com.mx//img/logos/competicoes/47_imgbank_ami_20150601153400.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 36px;
+    height: 0.9em;
+    width: 1.3em;
+    position: absolute;
+    left: 63px;
+    top: 55%;
+    margin: -0.5em 0 0;
+}
+
+.menu>li.FRIENDY>a:before {
+    background-image: url(https://tr.dpstream1.my/red/fifa.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 36px;
+    height: 0.9em;
+    width: 1.3em;
+    position: absolute;
+    left: 63px;
+    top: 55%;
+    margin: -0.5em 0 0;
+}
+
+.menu>li.FRIEND>a:before {
+    background-image: url(https://tr.dpstream1.my/red/fifa.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 36px;
+    height: 0.9em;
+    width: 1.3em;
+    position: absolute;
+    left: 63px;
+    top: 55%;
+    margin: -0.5em 0 0;
+}
+
+.menu>li.FIFAINTERCONTINENTALCUP>a:before {
+    background-image: url(https://futbolgratisenhd.com/flags/fifa.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 36px;
+    height: 0.9em;
+    width: 1.3em;
+    position: absolute;
+    left: 63px;
+    top: 55%;
+    margin: -0.5em 0 0;
+}
+
+.menu>li.UFC>a:before {
+    background-image: url(https://mexitv.webcindario.com/banderas/ufc.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 32px;
+    position: absolute;
+    top: 55%;
+    margin: -0.5em -5 0;
+    height: 1em;
+    width: 2em;
+}
+
+.menu>li.EURO_COPA>a:before {
+    background-image: url(https://imagecache.365scores.com/image/upload/v6/Competitions/6316);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 32px;
+    height: 0.9em;
+    width: 2em;
+    position: absolute;
+    left: 45px;
+    top: 55%;
+    margin: -.5em 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 70%;
+    }
+
+    .menu>li>a:before {
+        height: 0.91em !important;
+        width: 0.6em !important;
+        left: 45px;
+    }
+
+    .menu>li.NHL,.WWE,.NBA>a:before {
+        height: 1.0em;
+        width: 0.7em;
+    }
+
+    .menu>li.UFC>a:before {
+        height: 1em !important;
+        width: 0.7em !important;
+        left: 48px;
+    }
+
+    .menu>li.FIFA>a:before {
+        height: 0.7em !important;
+        width: 1.5em !important;
+        left: 34px;
+    }
+
+    .menu>li.AFC>a:before {
+        height: 0.9em !important;
+        width: 1.5em !important;
+        left: 34px;
+    }
+}
