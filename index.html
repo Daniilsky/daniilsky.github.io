@@ -5,483 +5,607 @@
     document.oncontextmenu = function(){return false}
 </script>
 <script disable-devtool-auto src="//fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script>
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css" type="text/css">
-    <title>Futbol PRO | Futbol en vivo Gratis</title>
+    <title>FUTBOL PRO - Deportes en VIVO</title>
+    <meta name="robots" content="index,follow">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="" />
+    <link rel="icon" href="/img/logo.png" type="image/png" />
+    <meta name="referrer" content="always">
+    <meta name="description" content="Tele Deportes Canales para ver Deportes online en vivo y en directo gratis por internet. Canales de Deportes de manera Gratuita y Online ">
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Telefull - Ver Canales de Deportes online en vivo y en directo gratis" />
+    <meta property="og:description" content="En Tele Deportes puedes ver Canales de Deportes de forma Gratuita y Online " />
+    <meta property="og:url" content="/img/logo.png" />
+    <meta property="og:site_name" content="Tele Deportes" />
+    <meta property="og:image" content="/img/logo.png"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Tele Deportes Ver Canales de Deportes gratis online en vivo y en directo, mira todos los canales de forma online por internet." />
+    <meta name="twitter:title" content="Tele Deportes - Canales de Deportes online en vivo y en directo" />
+    <meta name="twitter:image" content="/img/logo.png" />
+    
+    <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script>   
+    <link rel="stylesheet" href="/css/style8.css">
+    <script type="text/javascript" src="/smallscripts1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="/css/p23.css?v3" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="/css/star.css" rel="stylesheet">
+    <script type="text/javascript" src="/en-vivo-online/star+/horario.js?v"></script>
+
+    <!-- Estilos -->
+    <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+        /* Estilo para el título fijo */
+        #titulo-fijo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px; /* Alto del encabezado */
+        background-color: #141d26;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+        z-index: 1000;
+        }
+
+        #titulo-fijo a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        }
+
+        .logo-img {
+        height: 94px; /* Tamaño del logo, ajustable */
+        max-width: 200px;
+        object-fit: contain;
+        }
+        /* Animación al aparecer */
+        @keyframes fadeInUp {
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+        /* Estilo de cada tarjeta de canal */
+        .channel-card {
+        width: 160px;      
+        height: 180px;     
+        max-width: none; 
+        margin: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; /* para que el contenido se distribuya bien verticalmente */
+
+        background: linear-gradient (135deg, #00c6ff, #0072ff);; rgba(200, 200, 200, 0.05));
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+        transform: translateY(20px);
+        }
+
+
+        /* Espaciado animado por tarjeta */
+        .channel-card:nth-child(1) { animation-delay: 0.1s; }
+        .channel-card:nth-child(2) { animation-delay: 0.2s; }
+        .channel-card:nth-child(3) { animation-delay: 0.3s; }
+        .channel-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .channel-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Imagen del logo */
+        .channel-card img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        display: block;
+        }
+
+        /* Efecto al pasar el mouse por el logo */
+        .channel-card img:hover {
+        transform: scale(1.05);
+        }
+
+        /* Título del canal */
+        .channel-card p.des {
+        color: #fff;
+        margin: 8px 0 6px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        }
+
+        /* Botón "Ver en Vivo" */
+        .channel-card span {
+        background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        color: white;
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 13px;
+        display: inline-block;
+        margin-top: 4px;
+        transition: background 0.3s ease;
+        }
+
+        /* Hover sobre el botón */
+        .channel-card span:hover {
+        background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        }
+
+        /* Ícono dentro del botón */
+        .channel-card i {
+        margin-right: 5px;
+        font-size: 14px;
+        }
+
+        /* Enlace del canal */
+        .channel-card a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        }
+
+
+        /* Otros estilos existentes */
+        .button-container {display: flex;align-items: center;}
+        .md-link {margin-right: 8px;}
+        p.des { margin-bottom: 5px;text-align: center;line-height: 23px;color: #fff;}
+        #buscar::placeholder {color: #fff; }
+        .d-none {display: none !important; }
+        .main__filter-search,.main__filter-wrap{display: flex;flex-direction: row;justify-content: flex-start;align-items: center;width: 100%;position: relative;}
+        .main__filter-search { margin-top: 10px}
+        .main__filter-search input {width: 100%;height: 40px;background-color: #141d26;color: #fff ;font-size: 14px;border-radius: 12px;border: none;padding: 0 60px 0 20px;font-family: Inter,sans-serif;--bs-card-border-width: 0.0625rem;--bs-card-border-color: hsl(0deg 0% 100% / 30%);border: var(--bs-card-border-width) solid var(--bs-card-border-color);}
+        input:focus {--bs-card-border-width: 0.0625rem;--bs-card-border-color: hsl(0deg 0% 100% / 30%);border: var(--bs-card-border-width) solid var(--bs-card-border-color);}
+        .main__filter-search input:focus {border-color: #141d26}
+        .main__filter-search button {position: absolute;right: 20px;top: 0;height: 40px;width: auto;display: flex;flex-direction: row;justify-content: center;align-items: center}
+        .main__filter-search button svg {width: 20px;height: auto;fill: #fff;transition: .5s ease}
+        .main__filter-search button:hover svg {fill: #6164ff}
+        .inf {background-color: #ffffff;border-radius: 5px;color: #fff;font-size: 12px;font-weight: 700;padding: 2px 10px;position: absolute;}
+        .object-contain {object-fit: contain; margin-top: 1.6rem;}
+        ::-webkit-scrollbar {width: 10px;}
+        ::-webkit-scrollbar-track{background: #141d26;}
+        ::-webkit-scrollbar-thumb{background: #33e7ff;}
+        scrollbar-width: thin;scrollbar-color: #141d26 #ff5b00f;
+
+        /* Responsive iframe */
+        @media screen and (min-width:0px) and (max-width:767px){
+            .iframe-container iframe{height:266px}
+        }
+    </style>
 </head>
 
-<body id="pageBody">
+<body>
 
-    <header class="main-header">
-    <div class="hero-section">
-        <h1>Futbol PRO <span style="color:var(--accent)">HD</span></h1>
-    </div>
-
-    <div class="controls-container" style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
-
-        <!-- Nuevo Control ADULTOS -->
-        <div class="pro-control">
-            <span class="pro-text" id="adult-text" style="color: #555;"> +18 DESACTIVADO</span>
-            <label class="switch">
-                <input type="checkbox" id="adult-toggle">
-                <span class="slider" style="background-color: #ff4757;"></span>
-            </label>
-        </div>
-    </div>
-</header>
-
-<!-- Modal de Contraseña (Poner fuera del header, al final del body) -->
-<div id="password-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(5px);">
-    <div style="background:#1a1a1a; padding:30px; border-radius:15px; text-align:center; border: 1px solid #333; box-shadow: 0 10px 25px rgba(0,0,0,0.5); width: 300px;">
-        <h3 style="color:white; margin-bottom:10px; font-family: sans-serif;">Control Parental</h3>
-        <p style="color:#888; font-size: 14px; margin-bottom: 20px;">Ingresa la clave de acceso</p>
-        <input type="password" id="parental-pass" placeholder="••••" style="padding:12px; border-radius:8px; border:1px solid #444; background:#000; color:white; margin-bottom:20px; width:100%; text-align:center; font-size:20px;">
-        <div style="display:flex; gap:10px;">
-            <button onclick="verificarPassword()" style="flex:1; padding:12px; background:var(--accent); border:none; border-radius:8px; color:white; cursor:pointer; font-weight:bold;">Entrar</button>
-            <button onclick="cerrarModal()" style="flex:1; padding:12px; background:#333; border:none; border-radius:8px; color:white; cursor:pointer;">Cancelar</button>
-        </div>
-    </div>
+<!-- TÍTULO FIJO -->
+<div id="titulo-fijo">
+    <a href="/" style="text-decoration: none; color: #ffffff; font-size: 24px; font-weight: bold; font-family: sans-serif;">
+        FUTBOL PRO HD
+    </a>
 </div>
 
- <!-- CONTENEDOR DE LA AGENDA DEPORTIVA -->
-<div style="max-width: 1200px; margin: 15px auto; padding: 0 10px; width: 100%; box-sizing: border-box; transform: translateZ(0); will-change: transform;">
-    <iframe 
-        src="/agenda.html" 
-        id="theframe" 
-        width="100%" 
-        height="470" 
-        frameborder="0" 
-        allowfullscreen="true" 
-        scrolling="auto" 
-        loading="lazy" 
-        sandbox="allow-scripts allow-same-origin allow-forms"
-        style="border-radius: 12px; display: block; background: #1a1a1a; contain: content;">
-    </iframe>
-</div>
-   
-    <center>
-    <h2 style="font-size: 18px;">Futbol en vivo Gratis <span style="color:var(--accent)"></span></h2>
-    </center>
-    
-    <div class="search-container">
-    <div class="search-box">
-        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
-            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
-        </svg>
-        <input type="text" id="canalSearch" placeholder="Buscar canal por nombre o país...">
-    </div>
-</div>
+<br>
 
+<!-- Contenedor principal (con margen superior para que no lo tape el título) -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px; margin-top: 60px;">
 
-    <main class="grid-premium" id="canalesGrid">
-        
-<!-- ACCESO COMUNIDAD -->
-<a href="#" class="card">
-    <span class="badge" style="color:#0088cc">Comunidad</span>
-    <div class="logo-wrap" style="background: rgba(0, 136, 204, 0.1);">
-        <img src="/img/Telegram.png" alt="Telegram">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">Telegram (Grupo)</h3>
-        <div class="status"><div class="dot" style="background:#0088cc; box-shadow:0 0 8px #0088cc"></div> Únete ahora</div>
-    </div>
-</a>
+    <div class="iframe-container">
+        <iframe allowfullscreen="true" scrolling="auto" src="/agenda.html" frameborder="0" width="100%" height="470" id="theframe"></iframe>   
+        <center><br>    
+            <a style="font-size: 20px; font-weight: bold; color: #33e7ff;">Comparte la Página</a>
+        </center>
+        <br>
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=656f5d95d945ce0012dd9364&product=inline-share-buttons" async="async"></script>
+        <div class="sharethis-inline-share-buttons"></div>
+        <br>
 
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3Bu" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/ESPN.webp" alt="ESPN">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • 4K</div>
-    </div>
-</a>
+        <h2 class="text-3xl my-3 text-center">Canales en vivo</h2> 
 
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuMg==" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/ESPN_2.webp" alt="ESPN 2">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN 2</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuMw==" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/ESPN_3.webp" alt="ESPN 3">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN 3</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuNA==" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/ESPN4.png" alt="ESPN 4">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN 4</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuNQ==" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/espn5.png" alt="ESPN 5">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN 5</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuNg==" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/espn6.png" alt="ESPN 6">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN 6</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuNw==" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/espn7.png" alt="ESPN 7">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN 7</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<!-- CONTINUACIÓN DEPORTES PRO (OCULTOS POR DEFECTO) -->
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BuZGVwb3J0ZXM=" class="card">
-    <span class="badge" style="color:var(--sports)">USA</span>
-    <div class="logo-wrap">
-        <img src="/img/espndeportes.png" alt="ESPN Deportes">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN Deportes</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1lc3BucHJlbWl1bQ==" class="card">
-    <span class="badge" style="color:var(--sports)">Argentina</span>
-    <div class="logo-wrap">
-        <img src="/img/ESPN_Premium.png" alt="ESPN Premium">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">ESPN Premium</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • 4K</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT10bnRzcG9ydHM=" class="card">
-    <span class="badge" style="color:var(--sports)">Argentina</span>
-    <div class="logo-wrap">
-        <img src="/img/tnts.png" alt="TNT Sports">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">TNT Sports</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1mb3hzcG9ydHM=" class="card">
-    <span class="badge" style="color:var(--sports)">Argentina</span>
-    <div class="logo-wrap">
-        <img src="/img/Fox-Sports.png" alt="FOX Sports">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">FOX Sports</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1mb3hzcG9ydHMy" class="card">
-    <span class="badge" style="color:var(--sports)">Argentina</span>
-    <div class="logo-wrap">
-        <img src="/img/Fox-Sports-2.png" alt="FOX Sports 2">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">FOX Sports 2</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1mb3hzcG9ydHMz" class="card">
-    <span class="badge" style="color:var(--sports)">Argentina</span>
-    <div class="logo-wrap">
-        <img src="/img/Fox-Sports-3.png" alt="FOX Sports 3">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">FOX Sports 3</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<!-- CONTINUACIÓN DEPORTES PRO (BLOQUEADOS) -->
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT10eWNzcG9ydHM=" class="card">
-    <span class="badge" style="color:var(--sports)">Argentina</span>
-    <div class="logo-wrap">
-        <img src="/img/tyc.webp" alt="TyC Sports">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">TyC Sports</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<!-- CANALES DEPORTIVOS PREMIUM (SUDAMÉRICA) -->
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1kc3BvcnRz" class="card">
-    <span class="badge" style="color:var(--sports)">Latam</span>
-    <div class="logo-wrap">
-        <img src="/img/DSports.png" alt="DSports">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">DSports</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1kc3BvcnRzMg==" class="card">
-    <span class="badge" style="color:var(--sports)">Latam</span>
-    <div class="logo-wrap">
-        <img src="/img/DSports_2.png" alt="DSports 2">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">DSports 2</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1kc3BvcnRzcGx1cw==" class="card">
-    <span class="badge" style="color:var(--sports)">Latam</span>
-    <div class="logo-wrap">
-        <img src="/img/DSports_Plus.png" alt="DSports +">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">DSports +</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT13aW5zcG9ydHNwbHVz" class="card">
-    <span class="badge" style="color:var(--sports)">Colombia</span>
-    <div class="logo-wrap">
-        <img src="/img/win.png" alt="Win Sports">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">Win Sports</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1saWdhMW1heA==" class="card">
-    <span class="badge" style="color:var(--sports)">Perú</span>
-    <div class="logo-wrap">
-        <img src="/img/l1max.svg" alt="L1MAX">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">L1MAX</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • 4K</div>
-    </div>
-</a>
-        
-<!-- CONTINUACIÓN DEPORTES PRO (MÉXICO Y SUDAMÉRICA) -->
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1jYW5hbDU=" class="card">
-    <span class="badge" style="color:var(--sports)">Uruguay</span>
-    <div class="logo-wrap">
-        <img src="/img/Canal5.png" alt="Canal 5 MX">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">Canal 5 MX</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1henRlY2E3" class="card">
-    <span class="badge" style="color:var(--sports)">Mexico</span>
-    <div class="logo-wrap">
-        <img src="/img/Azteca7.png" alt="Azteca 7">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">Azteca 7</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>        
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT10dWRu" class="card">
-    <span class="badge" style="color:var(--sports)">Mexico</span>
-    <div class="logo-wrap">
-        <img src="/img/TUDN.png" alt="TUDN">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">TUDN</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<a href="/eventos/?r=L3NwLmh0bWw/Z2V0PWh0dHBzOi8vbGExNGhkLmNvbS92aXZvL2NhbmFsZXMucGhwP3N0cmVhbT1iZWluc3BvcnRlcw==" class="card">
-    <span class="badge" style="color:var(--sports)">USA</span>
-    <div class="logo-wrap">
-        <img src="/img/beines.png" alt="beIN Sports ES">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">beIN Sports ES</h3>
-        <div class="status"><div class="dot" style="background:var(--sports); box-shadow:0 0 8px var(--sports)"></div> En vivo • HD</div>
-    </div>
-</a>
-
-<!-- SECCIÓN DEPORTES PRO (OCULTOS POR DEFECTO) -->
-
-<a href="/eventos/?r=" class="card is-adult">
-    <!-- Usamos un color rojo o distinto para la etiqueta -->
-    <span class="badge" style="color:#ff4757; border-color:#ff4757">Adultos +18</span>
-    <div class="logo-wrap">
-        <img src="/img/venus.png" alt="Canal Adulto">
-    </div>
-    <div class="info">
-        <h3 class="channel-name">Venus</h3>
-        <div class="status">
-            <div class="dot" style="background:#ff4757; box-shadow:0 0 8px #ff4757"></div> 
-            Privado • HD
+        <!-- Caja de búsqueda -->
+        <div class="main__filter-search">
+            <input type="text" id="buscar" placeholder="Buscar Canal..." />
         </div>
-    </div>
-</a>
+
+<div class="channels grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 my-5">
+  
+  <!-- Telegram -->
+  <div class="channel-card" data-channel="ESPN">
+    <a href="">
+      <img src="/img/Telegram.png" alt="ESPN 1" title="ESPN en VIVO">
+      <p class="des">Telegram</p>
+      <span><i class="fas fa-play-circle"></i>Unete al Grupo</span>
+    </a>
+  </div>
+  
+  <!-- Stream TV -->
+  <div class="channel-card" data-channel="Stream TV">
+    <a href="/stream-tv.php">
+      <img src="/img/streamtv.png" alt="ESPN 1" title="Stream TV en VIVO">
+      <p class="des">Stream TV</p>
+      <span><i class="fas fa-play-circle"></i>Ver en VIVO</span>
+    </a>
+  </div>
+  
+  <!-- Canal ESPN -->
+  <div class="channel-card" data-channel="ESPN">
+    <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84Nw==">
+      <img src="/img/espn.webp" alt="ESPN 1" title="ESPN en VIVO">
+      <p class="des">Ver ESPN</p>
+      <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+    </a>
+  </div>
+
+  <!-- Canal ESPN 2 -->
+  <div class="channel-card" data-channel="ESPN 2">
+    <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84OA==">
+      <img src="/img/espn2.webp" alt="ESPN 2" title="ESPN 2 en VIVO">
+      <p class="des">Ver ESPN 2</p>
+      <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+    </a>
+  </div>
+
+  <!-- Canal ESPN 3 -->
+  <div class="channel-card" data-channel="ESPN 3">
+    <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84OQ==">
+      <img src="/img/espn3.webp" alt="ESPN 3" title="ESPN 3 en VIVO">
+      <p class="des">Ver ESPN 3</p>
+      <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+    </a>
+  </div>
+
+  <!-- Canal ESPN 4 -->
+  <div class="channel-card" data-channel="ESPN 4">
+    <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85MA==">
+      <img src="/img/espn4.webp" alt="ESPN 4" title="ESPN 4 en VIVO">
+      <p class="des">Ver ESPN 4</p>
+      <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+    </a>
+  </div>
+  
+  <!-- Canal ESPN 5 -->
+<div class="channel-card" data-channel="ESPN 5">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85MQ==">
+    <img src="/img/espn5.png" alt="ESPN 5" title="ESPN 5 en VIVO">
+    <p class="des">Ver ESPN 5</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal ESPN 6 -->
+<div class="channel-card" data-channel="ESPN 6">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85Mg==">
+    <img src="/img/espn6.webp" alt="ESPN 6" title="ESPN 6 en VIVO">
+    <p class="des">Ver ESPN 6</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal ESPN 7 -->
+<div class="channel-card" data-channel="ESPN 7">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85Mw==">
+    <img src="/img/espn7.webp" alt="ESPN 7" title="ESPN 7 en VIVO">
+    <p class="des">Ver ESPN 7</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal ESPN Deportes -->
+<div class="channel-card" data-channel="ESPN Deportes">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83MQ==">
+    <img src="/img/espndeportes.png" alt="ESPN Deportes" title="ESPN Deportes en VIVO">
+    <p class="des">Ver ESPN Deportes</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal ESPN Premium -->
+<div class="channel-card" data-channel="ESPN Premium">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83Ng==">
+    <img src="/img/espnpr.webp" alt="ESPN Premium" title="ESPN Premium en VIVO">
+    <p class="des">Ver ESPN Premium</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal TNT Sports -->
+<div class="channel-card" data-channel="TNT Sports">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83NQ==">
+    <img src="/img/tntsports.png" alt="TNT Sports" title="TNT Sports en VIVO">
+    <p class="des">Ver TNT Sports</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal TyC Sports -->
+<div class="channel-card" data-channel="TyC Sports">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83Nw==">
+    <img src="/img/tycsports.png" alt="TyC Sports" title="TyC Sports en VIVO">
+    <p class="des">Ver TyC Sports</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal Universo -->
+<div class="channel-card" data-channel="Universo">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83Mg==">
+    <img src="/img/universo.png" alt="NBC Universo" title="NBC Universo en VIVO">
+    <p class="des">Ver Universo</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal FOX Sports Premium MX -->
+<div class="channel-card" data-channel="FOX Sports Premium MX">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDQ=">
+    <img src="/img/foxpr.png" alt="FOX Sports Premium MX (Mexico)" title="FOX Sports Premium en VIVO">
+    <p class="des">FOX Sports Premium MX</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal FOX Deportes -->
+<div class="channel-card" data-channel="FOX Deportes">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83MA==">
+    <img src="/img/foxdeportes.png" alt="FOX Deportes" title="FOX Deportes en VIVO">
+    <p class="des">Ver FOX Deportes</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal FOX Sports -->
+<div class="channel-card" data-channel="FOX Sports">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83OA==">
+    <img src="/img/foxsports.png" alt="FOX Sports 1" title="FOX Sports en VIVO">
+    <p class="des">Ver FOX Sports</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal FOX Sports 2 -->
+<div class="channel-card" data-channel="FOX Sports 2">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi83OQ==">
+    <img src="/img/foxsports2.png" alt="FOX Sports 2" title="FOX Sports 2 en VIVO">
+    <p class="des">Ver FOX Sports 2</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal FOX Sports 3 -->
+<div class="channel-card" data-channel="FOX Sports 3">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84MA==">
+    <img src="/img/foxsports3.png" alt="FOX Sports 3" title="FOX Sports 3 en VIVO">
+    <p class="des">Ver FOX Sports 3</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal bein en español -->
+<div class="channel-card" data-channel="bein en español">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi82OQ==">
+    <img src="/img/beinñ.png" alt="bein Ñ" title="bein Ñ en VIVO">
+    <p class="des">Ver bein en Español</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal DSports -->
+<div class="channel-card" data-channel="DSports">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85NA==">
+    <img src="/img/dsports.webp" alt="DirecTV Sports (DSports)" title="DSports en VIVO">
+    <p class="des">Ver DSports</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal DSports 2 -->
+<div class="channel-card" data-channel="DSports 2">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85NQ==">
+    <img src="/img/dsports2.webp" alt="DirecTV Sports 2 (DSports 2)" title="DSports 2 en VIVO">
+    <p class="des">Ver DSports 2</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal DSports+ -->
+<div class="channel-card" data-channel="DSports+">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85Ng==">
+    <img src="/img/dsportsplus.webp" alt="DirecTV Sports + (DSports +)" title="DSports Plus en VIVO">
+    <p class="des">Ver DSports +</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal TNT Sports Chile -->
+<div class="channel-card" data-channel="TNT Sports Chile">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84Mw==">
+    <img src="/img/tnt-sports.png" alt="TNT Sports Chile" title="TNT Sports Chile en VIVO">
+    <p class="des">Ver TNT Sports Chile</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal Win Sports + -->
+<div class="channel-card" data-channel="Win Sports +">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84MQ==">
+    <img src="/img/winsports.webp" alt="Win Sports + (Win Sports Plus)" title="Win Sports + en VIVO">
+    <p class="des">Ver Win Sports +</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal Liga 1 MAX -->
+<div class="channel-card" data-channel="Liga 1 MAX">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi84NA==">
+    <img src="/img/liga1max.webp" alt="Liga 1 Max (Liga1)" title="Liga1 MAX en VIVO">
+    <p class="des">Ver Liga 1 MAX</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal VTV Plus -->
+<div class="channel-card" data-channel="VTV Plus">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDk=">
+    <img src="/img/vtvplus.webp" alt="VTV Plus (VTV +)" title="VTV + en VIVO">
+    <p class="des">Ver VTV Plus</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal TUDN USA -->
+<div class="channel-card" data-channel="TUDN USA">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi82OA==">
+    <img src="/img/tudn.png" alt="TUDN" title="TUDN en VIVO">
+    <p class="des">Ver TUDN USA</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal ESPN Mexico -->
+<div class="channel-card" data-channel="ESPN Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85Nw==">
+    <img src="/img/espn.webp" alt="ESPN 1" title="ESPN Mexico en VIVO">
+    <p class="des">Ver ESPN Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- ESPN 2 Mexico -->
+<div class="channel-card" data-channel="ESPN 2 Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85OA==">
+    <img src="/img/espn2.webp" alt="ESPN 2" title="ESPN 2 Mexico en VIVO">
+    <p class="des">Ver ESPN 2 Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- ESPN 3 Mexico -->
+<div class="channel-card" data-channel="ESPN 3 Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi85OQ==">
+    <img src="/img/espn3.webp" alt="ESPN 3" title="ESPN 3 Mexico en VIVO">
+    <p class="des">Ver ESPN 3 Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- TVC Deportes -->
+<div class="channel-card" data-channel="AYM Sports">
+  <a href="/eventos/?r=L3NwLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMy8xMDU=">
+    <img src="/img/aym.png" alt="AYM Sports" title="AYM Sports en VIVO">
+    <p class="des">Ver AYM Sports Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- TUDN Mexico -->
+<div class="channel-card" data-channel="TUDN Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDY=">
+    <img src="/img/tudn.png" alt="TUDN Mexico" title="TUDN Mexico en VIVO">
+    <p class="des">Ver TUDN Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- FOX Sports 1 Mexico -->
+<div class="channel-card" data-channel="FOX Sports 1 Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDE=">
+    <img src="/img/fox1_mx.png" alt="FOX Sports 1" title="FOX Sports Mexico en VIVO">
+    <p class="des">Ver FOX Sports Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- FOX Sports 2 Mexico -->
+<div class="channel-card" data-channel="FOX Sports 2 Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDI=">
+    <img src="/img/fox2-mx.png" alt="FOX Sports 2" title="FOX Sports 2 Mexico en VIVO">
+    <p class="des">Ver FOX Sports 2 Mexico</p>
+    <span><i class="fas fa-play-circle"></i> Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- FOX Sports 3 Mexico -->
+<div class="channel-card" data-channel="FOX Sports 3 Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDM=">
+    <img src="/img/fox3_mx.png" alt="FOX Sports 3" title="FOX Sports 3 Mexico en VIVO">
+    <p class="des">Ver FOX Sports 3 Mexico</p>
+    <span>Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Azteca 7 -->
+<div class="channel-card" data-channel="Azteca 7">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDg=">
+    <img src="/img/azteca7.png" alt="Azteca 7" title="Azteca 7 en VIVO">
+    <p class="des">Ver Azteca 7</p>
+    <span>Ver en VIVO</span>
+  </a>
+</div>
+
+<!-- Canal 5 MX -->
+<div class="channel-card" data-channel="Canal 5 Mexico">
+  <a href="/eventos/?r=L3NhLnBocD9nZXQ9aHR0cHM6Ly9ib2xhbG9jYS5teS9wbGF5ZXIvMi8xMDc=">
+    <img src="/img/canal5mx.png" alt="Canal 5 Mexico" title="Canal 5 Mexico en VIVO">
+    <p class="des">Ver Canal 5 Mexico</p>
+    <span>Ver en VIVO</span>
+  </a>
+</div>
+
+</div>
 
 
+</div>
+</div>
 
-    </main>
-
-    <script>
-    // Referencias a elementos
-    const body = document.getElementById('pageBody');
-    const searchInput = document.getElementById('canalSearch');
-
-    // Elementos Modo ADULTO
-    const toggleAdult = document.getElementById('adult-toggle');
-    const statusTextAdult = document.getElementById('adult-text');
-    const adultModal = document.getElementById('password-modal');
-    const passInput = document.getElementById('parental-pass');
-    const CLAVE_CORRECTA = "TeleSexHD"; // <--- Cambia tu contraseña aquí
-
-    // --- 2. LÓGICA MODO ADULTO (CON CLAVE) ---
-    function aplicarEstadoAdulto(activado) {
-        if (activado) {
-            body.classList.add('show-adult');
-            statusTextAdult.innerText = "MODO ADULTO ACTIVADO";
-            statusTextAdult.style.color = "#ff4757";
-            toggleAdult.checked = true;
-        } else {
-            body.classList.remove('show-adult');
-            statusTextAdult.innerText = "MODO ADULTO DESACTIVADO";
-            statusTextAdult.style.color = "#555";
-            toggleAdult.checked = false;
-        }
-        filtrarCanales();
-    }
-
-    // Interceptar el clic para pedir clave
-    toggleAdult.addEventListener('click', function(e) {
-        if (!body.classList.contains('show-adult')) {
-            e.preventDefault(); // Detiene el encendido
-            adultModal.style.display = "flex";
-            passInput.focus();
-        } else {
-            aplicarEstadoAdulto(false);
-            localStorage.setItem('modoAdulto', 'false');
-        }
-    });
-
-    function verificarPassword() {
-        if (passInput.value === CLAVE_CORRECTA) {
-            aplicarEstadoAdulto(true);
-            localStorage.setItem('modoAdulto', 'true');
-            cerrarModal();
-        } else {
-            alert("Clave incorrecta");
-            passInput.value = "";
-        }
-    }
-
-    function cerrarModal() {
-        adultModal.style.display = "none";
-        passInput.value = "";
-    }
-
-    // --- 3. SISTEMA DE BÚSQUEDA Y FILTRADO INTEGRADO ---
-    function filtrarCanales() {
-        const term = searchInput.value.toLowerCase();
-        const isProActive = body.classList.contains('show-pro');
-        const isAdultActive = body.classList.contains('show-adult');
-
-        document.querySelectorAll('.card').forEach(card => {
-            const nombre = card.querySelector('.channel-name').innerText.toLowerCase();
-            const pais = card.querySelector('.badge').innerText.toLowerCase();
-            const matchesSearch = nombre.includes(term) || pais.includes(term);
-
-            let visible = matchesSearch;
-
-            // Filtro Pro
-            if (card.classList.contains('is-pro') && !isProActive) {
-                visible = false;
-            }
-            // Filtro Adulto
-            if (card.classList.contains('is-adult') && !isAdultActive) {
-                visible = false;
-            }
-
-            card.style.display = visible ? "flex" : "none";
-        });
-    }
-
-    searchInput.addEventListener('input', filtrarCanales);
-
-    // --- 4. CARGA INICIAL (AL ABRIR LA WEB) ---
-    document.addEventListener("DOMContentLoaded", () => {
-        if (localStorage.getItem('modoPro') === 'true') aplicarEstadoPro(true);
-        if (localStorage.getItem('modoAdulto') === 'true') aplicarEstadoAdulto(true);
-    });
-</script>
-    
-    <!-- Script de botones para compartir -->
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64383314f9186b0019021703&product=sticky-share-buttons&source=platform" async="async"></script>
-
-<footer class="site-footer">
-    <div class="footer-social">
-        <ul class="footer-social-links" style="list-style: none; padding: 0;">
-            <li>
-                <a href="" target="_blank"></a>
-            </li>
-        </ul>
-    </div>
-    
-    <div class="footer-copy">
-        <p>© 2026 <span style="color: #fff;">Fubol Pro HD</span> | Futbol Premium - <a href="/dmca" rel="nofollow">DMCA</a></p>
-    </div>
-
-    <!-- Contador de visitas -->
-    <div class="counter-wrap">
-        
-    </div>
+<footer class="mt-4 bg-slate-200 text-zinc-600 py-4 dark:bg-slate-700">
+<div class="container mx-auto px-4 text-center">
+<p class="text-gray-800 dark:text-slate-300">FUTBOL PRO &copy; 2026</p></a> 
+<a href="/dmca/" rel="nofollow"> DMCA </a></center>
+<br>
+<script id="_waum9m">var _wau = _wau || []; _wau.push(["small", "kjcbz682dt", "m9m"]);</script><script async src="//waust.at/s.js"></script>
+</div>
 </footer>
 
+<script>
+$(document).ready(function() {
+    $('#buscar').on('input', function() {
+        var value = $(this).val().toLowerCase();
+        $('.channels > div').each(function() {
+            var channelName = $(this).attr('data-channel').toLowerCase();
+            if (channelName.indexOf(value) > -1) {
+                $(this).removeClass('d-none');
+            } else {
+                $(this).addClass('d-none');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
