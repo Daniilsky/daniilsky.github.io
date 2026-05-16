@@ -369,7 +369,27 @@ function renderEventos(){
   // Tomamos solo los eventos del día seleccionado y los ordenamos por hora
   const ligasOcultas = [
   "SPAIN LA LIGA",
-  "SPAIN SEGUNDA DIVISION"
+  "SPAIN SEGUNDA DIVISION",
+  "AUSTRALIA A-LEAGUE",
+  "AFL",
+  "NRL",
+  "PORTUGAL SEGUNDA LIGA",
+  "DIAMOND LEAGUE",
+  "IIHF WORLD CHAMPIONSHIP",
+  "SCOTLAND SCOTTISH PREMIERSHIP",
+  "UNITED RUGBY CHAMPIONSHIP",
+  "FRANCE TOP 14",
+  "POLAND EKSTRAKLASA",
+  "BULGARIA PARVA LIGA",
+  "EHF EUROPEAN LEAGUE WOMEN",
+  "SWEDEN ALLSVENSKAN",
+  "NORWAY ELITESERIEN",
+  "CROATIA 1. HNL",
+  "CZECH REPUBLIC 1. LIGA",
+  "AUSTRIA BUNDESLIGA",
+  "SWITZERLAND SUPER LEAGUE",
+  "GREECE SUPER LEAGUE",
+  "GERMANY 3. LIGA"
     ];
 
 const eventosDelDia = (agendaCompleta[fechaSeleccionada] || [])
@@ -383,7 +403,7 @@ const eventosDelDia = (agendaCompleta[fechaSeleccionada] || [])
 
     const opciones = channels.map(ch => {
       const lang = (ch.language || "ES").toUpperCase();
-      const embed = `https://strongst.link/ch?id=${ch.number}`;
+      const embed = `/sa.php?get=https://vuen.link/ch?id=${ch.number}`;
       const url = `/eventos/?r=${toBase64(embed)}`;
       return `<li class="subitem"><a href="${url}" target="_blank">
         <span><span class="lang-tag">${lang}</span>${ch.name||"Canal"}</span>
