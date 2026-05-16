@@ -403,7 +403,7 @@ const eventosDelDia = (agendaCompleta[fechaSeleccionada] || [])
 
     const opciones = channels.map(ch => {
       const lang = (ch.language || "ES").toUpperCase();
-      const embed = `/sa.php?get=https://vuen.link/ch?id=${ch.number}`;
+      const embed = `https://strongst.link/ch?id=${ch.number}`;
       const url = `/eventos/?r=${toBase64(embed)}`;
       return `<li class="subitem"><a href="${url}" target="_blank">
         <span><span class="lang-tag">${lang}</span>${ch.name||"Canal"}</span>
