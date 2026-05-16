@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro</title>
+
+<style>
+    body {
+        margin: 0px;
+    }
+
+    .ViostreamIframe {
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative; 
+    }
+
+    .ViostreamIframe iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .bot-whspp {
+        position: absolute; 
+        top: 5px; 
+        left: 35px;
+        z-index: 999;
+        padding: 3px 6px;
+        background-color: #25D366; 
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 1.2;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+        transition: background-color 0.2s;
+    }
+
+    .bot-whspp:hover {
+        background-color: #128C7E;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var iframeSrc = urlParams.get("get");
+        
+        var mainContainer = document.createElement("div");
+        mainContainer.className = "ViostreamIframe";
+
+        var whatsappButton = document.createElement("a");
+        whatsappButton.className = "";
+        whatsappButton.href = "";
+        whatsappButton.target = "_blank";
+        whatsappButton.textContent = "";
+        
+        mainContainer.appendChild(whatsappButton);
+
+        if (iframeSrc) {
+            var iframe = document.createElement("iframe");
+            iframe.src = iframeSrc;
+            iframe.frameBorder = "0";
+            iframe.allowFullscreen = true;
+            iframe.sandbox = "allow-same-origin allow-scripts";
+
+            mainContainer.insertBefore(iframe, whatsappButton);
+        } else {
+            mainContainer.style.backgroundColor = "#eee";
+            mainContainer.innerHTML += '<div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#555; font-size:1rem;">Esperando contenido con ?get=</div>';
+        }
+        
+        document.body.appendChild(mainContainer);
+    };
+</script>
+
+</head>
+<body>
+</body>
+</html>
