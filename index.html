@@ -45,8 +45,19 @@
 </div>
 
  <!-- CONTENEDOR DE LA AGENDA DEPORTIVA -->
-<div style="max-width: 1200px; margin: 20px auto; padding: 0 15px; width: 100%; box-sizing: border-box;">
-    <iframe allowfullscreen="true" scrolling="auto" src="/agenda.html" frameborder="0" width="100%" height="470" id="theframe" loading="lazy" style="border-radius: 12px; display: block; background: #1a1a1a;"></iframe>
+<div style="max-width: 1200px; margin: 15px auto; padding: 0 10px; width: 100%; box-sizing: border-box; transform: translateZ(0); will-change: transform;">
+    <iframe 
+        src="/agenda.html" 
+        id="theframe" 
+        width="100%" 
+        height="470" 
+        frameborder="0" 
+        allowfullscreen="true" 
+        scrolling="auto" 
+        loading="lazy" 
+        sandbox="allow-scripts allow-same-origin allow-forms"
+        style="border-radius: 12px; display: block; background: #1a1a1a; contain: content;">
+    </iframe>
 </div>
    
     <center>
